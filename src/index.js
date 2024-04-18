@@ -32,9 +32,10 @@ registerBlockType('pixelhero/grid-block', {
 	apiVersion: 3,
 	title: 'Grid Item Block',
 	category: 'media',
+	icon: "grid-view",
 	supports: {
 		html: false,
-		inserter: true,
+		inserter: false,
 		defaultStylePicker: false,
 	},
 	usesContext: ['norrehus/color', 'norrehus/contentPosition'],
