@@ -5,3 +5,38 @@
  * Replace them with your own styles or remove the file completely.
  */
 
+.grid-item_media {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+
+.middle-center {
+	justify-content: center;
+	align-items: center;
+}
+
+.middle-left {
+	justify-content: center;
+	align-items: start;
+}
+
+.middle-right {
+	justify-content: center;
+	align-items: end;
+}
+
+.middle-bottom {
+	justify-content: end;
+	align-items: center;
+}
+
+.bottom-left {
+	justify-content: end;
+	align-items: start;
+}
+
+.bottom-right {
+	justify-content: end;
+	align-items: end;
+}

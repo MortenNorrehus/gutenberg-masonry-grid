@@ -18,16 +18,48 @@ import './style.scss';
  * Internal dependencies
  */
 import Edit from './edit';
+import Save from './save.js';
 import metadata from './block.json';
+import { LayoutBlockEdit } from './components/blocks/LayoutBlock/LayoutBlock.js';
 
 /**
  * Every block starts by registering a new block type definition.
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-registration/
  */
+
+registerBlockType('pixelhero/grid-block', {
+	apiVersion: 3,
+	title: 'Grid Item Block',
+	category: 'media',
+	supports: {
+		html: false,
+		inserter: true,
+		defaultStylePicker: false,
+	},
+	usesContext: ['norrehus/color', 'norrehus/contentPosition'],
+	attributes: {
+		"media": {
+			"type": "object",
+			"default": {}
+		},
+		"title": {
+			"type": "string",
+			"default": "Title"
+		},
+		"url": {
+			"type": "string",
+			"default": ""
+		},
+	},
+	edit: LayoutBlockEdit
+})
+
 registerBlockType(metadata.name, {
 	/**
 	 * @see ./edit.js
 	 */
 	edit: Edit,
+	save: Save,
 });
+

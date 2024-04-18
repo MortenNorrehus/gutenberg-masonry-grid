@@ -18,9 +18,25 @@
   "render": "file:./render.php",
   "viewScript": "file:./view.js",
   "attributes": {
+    "layout": {
+      "type": "string",
+      "default": "layout_1"
+    },
     "images": {
       "type": "array",
       "default": []
+    },
+    "color": {
+      "type": "string",
+      "default": ""
+    },
+    "contentPosition": {
+      "type": "string",
+      "default": "middle-center"
     }
+  },
+  "providesContext": {
+    "norrehus/color": "color",
+    "norrehus/contentPosition": "contentPosition"
   }
 }
